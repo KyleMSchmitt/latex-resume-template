@@ -1,0 +1,52 @@
+\NewDocumentCommand{\resumeHeader}{ m m m m }{
+  \centerline{\Huge #1}
+  \vspace{5pt}
+  \centerline{
+    \href{mailto:#2}{#2} \,|\,
+    \href{https://linkedin.com/in/#3}{linkedin.com/in/#3} \,|\,
+    \href{https://github.com/#4}{github.com/#4}
+  }
+  \vspace{-5pt}
+}
+
+\NewDocumentCommand{\resumeSummary}{ m }{%
+  \addvspace{25pt}
+  {\itshape #1}
+  \addvspace{15pt}
+}
+
+\NewDocumentCommand{\experienceSection}{}{
+  \section*{Experience}
+}
+
+\NewDocumentCommand{\job}{ m m m m m o o }{%
+  \textbf{#1,} #2 -- #3 \hfill {#4}\par
+  \vspace{-6pt}
+  \begin{itemize}
+    #5
+  \end{itemize}
+
+  \IfValueT{#6}{%
+    \vspace{-10pt}
+    {\color{lightgrey}\rule{\textwidth}{0.1pt}}
+    \vspace{-10pt}
+  }
+
+  \IfValueT{#7}{%
+    \pagebreak
+  }
+}
+
+\NewDocumentCommand{\skillsSection}{m}{
+  \section*{Skills}
+  #1
+}
+
+\NewDocumentCommand{\skillRow}{m m}{
+  \textbf{#1:} #2\\
+}
+
+\NewDocumentCommand{\educationSection}{m m m}{
+  \section*{Education}
+  \textbf{#1} -- #2 \hfill #3\\
+}

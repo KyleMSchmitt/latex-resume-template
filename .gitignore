@@ -1,0 +1,33 @@
+# Exclude the final build output
+*.pdf
+
+## Core latex/pdflatex auxiliary files:
+*.aux
+*.lof
+*.log
+*.lot
+*.fls
+*.out
+*.toc
+*.fmt
+*.fot
+*.cb
+*.cb2
+.*.lb
+
+## Intermediate documents:
+*.dvi
+*.xdv
+
+## Bibliography and index files:
+*.bbl
+*.blg
+*.idx
+*.ind
+*.ilg
+*.bcf
+*.run.xml
+
+## Build tool/IDE generated files:
+*.synctex.gz
+*.fdb_latexmk

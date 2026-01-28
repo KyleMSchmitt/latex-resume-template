@@ -1,0 +1,32 @@
+% page layout and formatting
+\usepackage[letterpaper, hmargin=0.5in, vmargin=0.5in]{geometry}
+\raggedright
+\pagestyle{empty}
+
+% fonts and character encoding
+\usepackage{XCharter} 
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+% ensure PDF output will be all-Unicode and machine-readable
+\input{glyphtounicode}
+\pdfgentounicode=1
+
+% custom colors
+\usepackage{color}
+\definecolor{lightgrey}{rgb}{0.8, 0.8, 0.8}
+
+% hyperlink formatting
+\usepackage[hidelinks]{hyperref}
+
+% section heading formatting
+\usepackage{titlesec}
+\titleformat{\section}{\bfseries\large}{}{0pt}{}[\vspace{2pt}\titlerule\vspace{-4pt}]
+
+% list formatting
+\usepackage{enumitem}
+\setlist[itemize]{itemsep=-2pt, leftmargin=12pt, topsep=7pt}
+\renewcommand\labelitemi{$\vcenter{\hbox{\small$\bullet$}}$}
+
+% provides optional argument support for custom commands
+\usepackage{xparse}
